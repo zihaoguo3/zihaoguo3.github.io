@@ -4,30 +4,12 @@
   <meta charset="UTF-8" />
   <title>Zihao Guo | Data Engineer & Data Scientist</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Portfolio website of Zihao Guo, Data Science student at Boston University and Data Engineer intern at Citizens Bank." />
   <style>
-    :root {
-      --bg: #f4f5f7;
-      --bg-alt: #ffffff;
-      --accent: #2563eb;
-      --accent-soft: rgba(37,99,235,0.08);
-      --text: #111827;
-      --muted: #6b7280;
-      --border: #e5e7eb;
-      --card-radius: 18px;
-      --max-width: 940px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-        "Segoe UI", sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #ffffff;
+      color: #111827;
       -webkit-font-smoothing: antialiased;
     }
 
@@ -36,24 +18,16 @@
       text-decoration: none;
     }
 
-    main {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 24px 18px 80px;
-    }
-
-    /* NAVBAR */
     header {
       position: sticky;
       top: 0;
-      z-index: 20;
-      backdrop-filter: blur(14px);
-      background: rgba(255, 255, 255, 0.94);
-      border-bottom: 1px solid var(--border);
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      z-index: 10;
     }
 
     .nav-inner {
-      max-width: var(--max-width);
+      max-width: 940px;
       margin: 0 auto;
       padding: 10px 18px;
       display: flex;
@@ -70,8 +44,8 @@
     .logo-circle {
       width: 26px;
       height: 26px;
-      border-radius: 999px;
-      background: radial-gradient(circle at 30% 0%, #60a5fa, #2563eb, #1d4ed8);
+      border-radius: 50%;
+      background: linear-gradient(135deg, #2563eb, #3b82f6);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -83,9 +57,8 @@
     .nav-name {
       font-size: 14px;
       font-weight: 600;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: #111827;
     }
 
     nav ul {
@@ -98,7 +71,7 @@
     }
 
     nav a {
-      color: var(--muted);
+      color: #6b7280;
       padding: 4px 0;
       position: relative;
     }
@@ -110,9 +83,9 @@
       bottom: -2px;
       width: 0;
       height: 2px;
-      background: var(--accent);
+      background: #2563eb;
       border-radius: 999px;
-      transition: width 0.18s ease-out;
+      transition: width 0.15s ease-out;
     }
 
     nav a:hover {
@@ -123,27 +96,28 @@
       width: 100%;
     }
 
-    /* HERO */
-    .hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr);
-      gap: 24px;
-      padding-top: 32px;
-      padding-bottom: 24px;
-      align-items: center;
+    main {
+      max-width: 940px;
+      margin: 0 auto;
+      padding: 24px 18px 60px;
     }
 
-    .hero-profile {
+    /* HERO */
+    .hero {
+      padding: 32px 0 16px;
+    }
+
+    .hero-top {
       display: flex;
       align-items: center;
       gap: 18px;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
 
     .hero-avatar {
       width: 80px;
       height: 80px;
-      border-radius: 999px;
+      border-radius: 50%;
       overflow: hidden;
       border: 2px solid #d1d5db;
       background: #e5e7eb;
@@ -165,12 +139,12 @@
 
     .hero-title-small {
       font-size: 13px;
-      color: var(--muted);
+      color: #6b7280;
     }
 
     .hero-subtitle {
       font-size: 16px;
-      color: var(--muted);
+      color: #4b5563;
       margin-bottom: 18px;
       max-width: 32rem;
     }
@@ -190,15 +164,15 @@
       border: 1px solid transparent;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
       cursor: pointer;
       transition: transform 0.12s ease-out, box-shadow 0.12s ease-out,
-        background 0.12s ease-out, border-color 0.12s ease-out;
+        background 0.12s ease-out, border-color 0.12s ease-out, color 0.12s ease-out;
     }
 
     .btn-primary {
       background: linear-gradient(to right, #2563eb, #3b82f6);
-      border-color: rgba(37,99,235,0.7);
+      border-color: #2563eb;
       color: #f9fafb;
       box-shadow: 0 5px 16px rgba(37,99,235,0.35);
     }
@@ -206,28 +180,27 @@
     .btn-primary:hover {
       transform: translateY(-1px);
       box-shadow: 0 8px 22px rgba(37,99,235,0.45);
-      background: linear-gradient(to right, #1d4ed8, #2563eb);
     }
 
     .btn-ghost {
-      background: var(--bg-alt);
-      border-color: var(--border);
-      color: var(--muted);
+      background: #ffffff;
+      border-color: #e5e7eb;
+      color: #4b5563;
     }
 
     .btn-ghost:hover {
       background: #eef2ff;
+      border-color: #c7d2fe;
       color: #1d4ed8;
       transform: translateY(-1px);
-      border-color: #c7d2fe;
     }
 
     .hero-note {
       font-size: 13px;
-      color: var(--muted);
+      color: #6b7280;
     }
 
-    /* SECTION WRAPPER */
+    /* SECTIONS */
     section {
       margin-top: 32px;
     }
@@ -248,7 +221,7 @@
       font-size: 11px;
       text-transform: uppercase;
       letter-spacing: 0.14em;
-      color: var(--muted);
+      color: #9ca3af;
     }
 
     .section-grid {
@@ -257,9 +230,9 @@
     }
 
     .card {
-      background: var(--bg-alt);
-      border-radius: var(--card-radius);
-      border: 1px solid var(--border);
+      background: #ffffff;
+      border-radius: 16px;
+      border: 1px solid #e5e7eb;
       padding: 14px 16px;
     }
 
@@ -278,12 +251,12 @@
 
     .card-meta {
       font-size: 12px;
-      color: var(--muted);
+      color: #6b7280;
     }
 
     .card-subtitle {
       font-size: 13px;
-      color: var(--muted);
+      color: #6b7280;
       margin-bottom: 6px;
     }
 
@@ -298,7 +271,7 @@
     .tag {
       padding: 4px 8px;
       border-radius: 999px;
-      background: var(--accent-soft);
+      background: #eff6ff;
       border: 1px solid #bfdbfe;
       color: #1d4ed8;
     }
@@ -307,14 +280,13 @@
       margin: 0;
       padding-left: 18px;
       font-size: 13px;
-      color: var(--muted);
+      color: #4b5563;
     }
 
     .card ul li + li {
       margin-top: 3px;
     }
 
-    /* SKILLS */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -323,7 +295,7 @@
 
     .skills-list {
       font-size: 13px;
-      color: var(--muted);
+      color: #4b5563;
       margin: 6px 0 0;
       padding: 0;
       list-style: none;
@@ -333,7 +305,6 @@
       margin-top: 2px;
     }
 
-    /* CONTACT */
     .contact-card {
       display: flex;
       flex-wrap: wrap;
@@ -344,7 +315,7 @@
 
     .contact-info {
       font-size: 14px;
-      color: var(--muted);
+      color: #4b5563;
     }
 
     .contact-links {
@@ -354,11 +325,11 @@
     }
 
     footer {
-      max-width: var(--max-width);
+      max-width: 940px;
       margin: 24px auto 0;
       padding: 0 18px 26px;
       font-size: 11px;
-      color: var(--muted);
+      color: #9ca3af;
       text-align: right;
     }
 
@@ -376,6 +347,10 @@
 
       main {
         padding-inline: 14px;
+      }
+
+      .hero-top {
+        align-items: flex-start;
       }
 
       .card {
@@ -404,43 +379,34 @@
   </header>
 
   <main>
-    <!-- HERO (simplified, no extra tags/cards) -->
+    <!-- HERO -->
     <section class="hero" id="top">
-      <div class="hero-left">
-        <div class="hero-profile">
-          <div class="hero-avatar">
-            <!-- Put your headshot in the repo as profile.jpg -->
-            <img src="profile.jpg" alt="Portrait of Zihao Guo" />
-          </div>
-          <div class="hero-title-block">
-            <h1>Data Engineer &amp; Data Science Student</h1>
-            <div class="hero-title-small">
-              Boston University · B.S. Data Science · Boston, MA
-            </div>
+      <div class="hero-top">
+        <div class="hero-avatar">
+          <!-- Put your headshot in the repo as profile.jpg (optional) -->
+          <img src="profile.jpg" alt="Portrait of Zihao Guo" />
+        </div>
+        <div class="hero-title-block">
+          <h1>Data Engineer &amp; Data Science Student</h1>
+          <div class="hero-title-small">
+            Boston University · B.S. Data Science · Boston, MA
           </div>
         </div>
-
-        <p class="hero-subtitle">
-          I build data pipelines, machine learning models, and interactive tools that turn messy data into useful products and insights.
-        </p>
-
-        <div class="hero-actions">
-          <a class="btn-primary" href="mailto:z2004@bu.edu">
-            Email Me
-            <span>→</span>
-          </a>
-          <a class="btn-ghost" href="https://github.com/zihaoguo3" target="_blank" rel="noopener">
-            GitHub
-          </a>
-          <a class="btn-ghost" href="https://www.linkedin.com/in/zihao-guo-771a20264/" target="_blank" rel="noopener">
-            LinkedIn
-          </a>
-        </div>
-
-        <p class="hero-note">
-          Currently: Data Science student at BU and former Data Engineer Intern at Citizens Bank.
-        </p>
       </div>
+
+      <p class="hero-subtitle">
+        I build data pipelines, machine learning models, and interactive tools that turn messy data into useful products and insights.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn-primary" href="mailto:z2004@bu.edu">Email Me →</a>
+        <a class="btn-ghost" href="https://github.com/zihaoguo3" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn-ghost" href="https://www.linkedin.com/in/zihao-guo-771a20264/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+
+      <p class="hero-note">
+        Currently: Data Science student at BU and former Data Engineer Intern at Citizens Bank.
+      </p>
     </section>
 
     <!-- ABOUT -->
@@ -502,7 +468,7 @@
         <div class="card">
           <div class="card-header-line">
             <div class="card-title">Cooledtured · Data Research Analyst</div>
-            <div class="card-meta">Dec 2024 – Mar 2025 · Bensenville, IL (Remote)</div>
+            <div class="card-meta">Dec 2024 – Mar 2025 · Remote</div>
           </div>
           <p class="card-subtitle">
             Social media analytics for Funko Pop and anime toy products.
@@ -516,7 +482,6 @@
             <span class="tag">SQL</span>
             <span class="tag">Python / Pandas</span>
             <span class="tag">Instagram Graph API</span>
-            <span class="tag">Data Cleaning</span>
             <span class="tag">Marketing Analytics</span>
           </div>
         </div>
@@ -537,7 +502,6 @@
             <span class="tag">Teaching</span>
             <span class="tag">Mentoring</span>
             <span class="tag">Mathematics</span>
-            <span class="tag">Communication</span>
           </div>
         </div>
       </div>
@@ -589,7 +553,6 @@
             <span class="tag">Python</span>
             <span class="tag">NLP</span>
             <span class="tag">Text Classification</span>
-            <span class="tag">Dashboards</span>
           </div>
         </div>
 
@@ -602,55 +565,14 @@
             Cloud data pipeline and dashboard for global policy effectiveness.
           </p>
           <ul>
-            <li>Built a modern data pipeline in Microsoft Azure and SQL to integrate COVID-19 data from three heterogeneous sources.</li>
-            <li>Analyzed 6,000+ global policy responses to evaluate their effectiveness on infection rates and mitigation.</li>
-            <li>Designed interactive Power BI dashboards to simulate policy scenarios and present a mitigation plan.</li>
+            <li>Built a data pipeline in Microsoft Azure and SQL to integrate COVID-19 data from multiple sources.</li>
+            <li>Analyzed 6,000+ global policy responses to evaluate their effectiveness on infection rates.</li>
+            <li>Created Power BI dashboards to simulate policy scenarios and present a mitigation plan.</li>
           </ul>
           <div class="card-tags">
             <span class="tag">Azure</span>
             <span class="tag">SQL</span>
             <span class="tag">Power BI</span>
-            <span class="tag">Data Engineering</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-header-line">
-            <div class="card-title">LAPD Crime &amp; Economic Data Analysis</div>
-            <div class="card-meta">Sep 2024 – Jan 2025</div>
-          </div>
-          <p class="card-subtitle">
-            Spatial analysis of crime patterns and neighborhood economics.
-          </p>
-          <ul>
-            <li>Analyzed 10 years of LAPD crime reports and linked them with census economic data to study crime-economy relationships.</li>
-            <li>Processed GIS datasets and built an R Shiny app with interactive maps to visualize spatial patterns.</li>
-          </ul>
-          <div class="card-tags">
-            <span class="tag">R</span>
-            <span class="tag">R Shiny</span>
-            <span class="tag">GIS</span>
-            <span class="tag">Data Visualization</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-header-line">
-            <div class="card-title">Sixth Degree of Separation</div>
-            <div class="card-meta">Sep 2023 – Dec 2023</div>
-          </div>
-          <p class="card-subtitle">
-            Rust network analysis tool for Gnutella peer-to-peer network.
-          </p>
-          <ul>
-            <li>Built a network analysis tool in Rust using BFS to study a 6,301-node, 20,777-edge Gnutella network.</li>
-            <li>Modeled connectivity and “six steps” behavior and created interactive connection maps to evaluate social networking costs.</li>
-          </ul>
-          <div class="card-tags">
-            <span class="tag">Rust</span>
-            <span class="tag">Graphs</span>
-            <span class="tag">BFS</span>
-            <span class="tag">Network Analysis</span>
           </div>
         </div>
       </div>
@@ -676,17 +598,14 @@
           <ul class="skills-list">
             <li>CNN, RNN, LSTM, KNN, K-Means</li>
             <li>Random Forest, Decision Trees, SVM</li>
-            <li>Gradient Boosting (XGBoost / LightGBM)</li>
-            <li>NLP (text classification, embeddings)</li>
-            <li>PyTorch, TensorFlow</li>
+            <li>NLP, PyTorch, TensorFlow</li>
           </ul>
         </div>
         <div>
           <div class="card-title">Data Engineering &amp; Cloud</div>
           <ul class="skills-list">
-            <li>AWS: S3, EMR Serverless, Athena, Lambda, SageMaker</li>
-            <li>Kafka, Spark, Hadoop, Snowflake, Databricks</li>
-            <li>Airflow, AutoSys, Datadog</li>
+            <li>AWS: S3, EMR Serverless, Athena</li>
+            <li>Kafka, Spark, Snowflake, Databricks</li>
             <li>Azure, Power BI</li>
           </ul>
         </div>
@@ -719,12 +638,7 @@
   </main>
 
   <footer>
-    &copy; <span id="year"></span> Zihao Guo · Built with GitHub Pages
+    &copy; 2025 Zihao Guo · Built with GitHub Pages
   </footer>
-
-  <script>
-    // Set current year in footer
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
