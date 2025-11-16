@@ -198,4 +198,533 @@
 
     .btn-primary {
       background: linear-gradient(to right, #2563eb, #3b82f6);
-      bor
+      border-color: rgba(37,99,235,0.7);
+      color: #f9fafb;
+      box-shadow: 0 5px 16px rgba(37,99,235,0.35);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 22px rgba(37,99,235,0.45);
+      background: linear-gradient(to right, #1d4ed8, #2563eb);
+    }
+
+    .btn-ghost {
+      background: var(--bg-alt);
+      border-color: var(--border);
+      color: var(--muted);
+    }
+
+    .btn-ghost:hover {
+      background: #eef2ff;
+      color: #1d4ed8;
+      transform: translateY(-1px);
+      border-color: #c7d2fe;
+    }
+
+    .hero-note {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* SECTION WRAPPER */
+    section {
+      margin-top: 32px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .section-header h2 {
+      font-size: 20px;
+      margin: 0;
+    }
+
+    .section-header span {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+    }
+
+    .section-grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .card {
+      background: var(--bg-alt);
+      border-radius: var(--card-radius);
+      border: 1px solid var(--border);
+      padding: 14px 16px;
+    }
+
+    .card-header-line {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .card-meta {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .card-subtitle {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px;
+      font-size: 11px;
+    }
+
+    .tag {
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      border: 1px solid #bfdbfe;
+      color: #1d4ed8;
+    }
+
+    .card ul {
+      margin: 0;
+      padding-left: 18px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .card ul li + li {
+      margin-top: 3px;
+    }
+
+    /* SKILLS */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+    }
+
+    .skills-list {
+      font-size: 13px;
+      color: var(--muted);
+      margin: 6px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .skills-list li + li {
+      margin-top: 2px;
+    }
+
+    /* CONTACT */
+    .contact-card {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .contact-info {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    footer {
+      max-width: var(--max-width);
+      margin: 24px auto 0;
+      padding: 0 18px 26px;
+      font-size: 11px;
+      color: var(--muted);
+      text-align: right;
+    }
+
+    @media (max-width: 640px) {
+      .nav-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+      }
+
+      nav ul {
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      main {
+        padding-inline: 14px;
+      }
+
+      .card {
+        padding: 12px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-inner">
+      <div class="nav-left">
+        <div class="logo-circle">ZG</div>
+        <div class="nav-name">Zihao Guo</div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO (simplified, no extra tags/cards) -->
+    <section class="hero" id="top">
+      <div class="hero-left">
+        <div class="hero-profile">
+          <div class="hero-avatar">
+            <!-- Put your headshot in the repo as profile.jpg -->
+            <img src="profile.jpg" alt="Portrait of Zihao Guo" />
+          </div>
+          <div class="hero-title-block">
+            <h1>Data Engineer &amp; Data Science Student</h1>
+            <div class="hero-title-small">
+              Boston University · B.S. Data Science · Boston, MA
+            </div>
+          </div>
+        </div>
+
+        <p class="hero-subtitle">
+          I build data pipelines, machine learning models, and interactive tools that turn messy data into useful products and insights.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn-primary" href="mailto:z2004@bu.edu">
+            Email Me
+            <span>→</span>
+          </a>
+          <a class="btn-ghost" href="https://github.com/zihaoguo3" target="_blank" rel="noopener">
+            GitHub
+          </a>
+          <a class="btn-ghost" href="https://www.linkedin.com/in/zihao-guo-771a20264/" target="_blank" rel="noopener">
+            LinkedIn
+          </a>
+        </div>
+
+        <p class="hero-note">
+          Currently: Data Science student at BU and former Data Engineer Intern at Citizens Bank.
+        </p>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="section-header">
+        <h2>About</h2>
+        <span>BACKGROUND</span>
+      </div>
+
+      <div class="section-grid">
+        <div class="card">
+          <div class="card-header-line">
+            <div class="card-title">Boston University · B.S. in Data Science &amp; Statistical Methods</div>
+            <div class="card-meta">Sep 2022 – May 2026 · Boston, MA</div>
+          </div>
+          <p class="card-subtitle">
+            Minor in Statistical Methods · GPA 3.55 / 4.00 (Technical GPA 3.7 / 4.0)
+          </p>
+          <ul>
+            <li>Focused on programming for data science, machine learning, A/B testing, and data privacy.</li>
+            <li>Four-time Dean’s List in the Faculty of Computing &amp; Data Science.</li>
+            <li>Course Assistant for linear algebra, multivariable calculus, and statistics, supporting 400+ students.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="section-header">
+        <h2>Experience</h2>
+        <span>WORK</span>
+      </div>
+
+      <div class="section-grid">
+        <div class="card">
+          <div class="card-header-line">
+            <div class="card-title">Citizens Bank · Data Engineer Intern</div>
+            <div class="card-meta">May 2025 – Aug 2025 · Westwood, MA</div>
+          </div>
+          <p class="card-subtitle">
+            Building data pipelines and analytics to support a large-scale mobile banking app.
+          </p>
+          <ul>
+            <li>Ingested 20+ Kafka pipelines into an S3 data lake with EMR Serverless and Java Spark, enabling real-time data processing for the consumer mobile app.</li>
+            <li>Applied vendor-specific business logic in Java to re-enrich transaction data from partners such as Mastercard and Spade.</li>
+            <li>Validated and monitored data quality using Athena analytical queries to support accurate downstream reporting.</li>
+          </ul>
+          <div class="card-tags">
+            <span class="tag">Java</span>
+            <span class="tag">Spark</span>
+            <span class="tag">Kafka</span>
+            <span class="tag">AWS S3</span>
+            <span class="tag">EMR Serverless</span>
+            <span class="tag">Athena</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header-line">
+            <div class="card-title">Cooledtured · Data Research Analyst</div>
+            <div class="card-meta">Dec 2024 – Mar 2025 · Bensenville, IL (Remote)</div>
+          </div>
+          <p class="card-subtitle">
+            Social media analytics for Funko Pop and anime toy products.
+          </p>
+          <ul>
+            <li>Analyzed 1,000+ Instagram posts using SQL, Pandas, and the Instagram Graph API to compute engagement and identify content trends.</li>
+            <li>Cleaned and standardized data by resolving missing values and optimizing 15+ attributes for accuracy and consistency.</li>
+            <li>Visualized engagement trends in Python and delivered recommendations that improved promotional strategy effectiveness by ~25%.</li>
+          </ul>
+          <div class="card-tags">
+            <span class="tag">SQL</span>
+            <span class="tag">Python / Pandas</span>
+            <span class="tag">Instagram Graph API</span>
+            <span class="tag">Data Cleaning</span>
+            <span class="tag">Marketing Analytics</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header-line">
+            <div class="card-title">Boston University · Course Assistant</div>
+            <div class="card-meta">Sep 2023 – Present · Boston, MA</div>
+          </div>
+          <p class="card-subtitle">
+            Faculty of Computing &amp; Data Sciences – Linear algebra, calculus, statistics.
+          </p>
+          <ul>
+            <li>Instructed students on core concepts in linear algebra, multivariable calculus, and statistics to improve course outcomes.</li>
+            <li>Held weekly office hours and supported 400+ students across four semesters by answering questions and debugging homework.</li>
+          </ul>
+          <div class="card-tags">
+            <span class="tag">Teaching</span>
+            <span class="tag">Mentoring</span>
+            <span class="tag">Mathematics</span>
+            <span class="tag">Communication</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="section-header">
+        <h2>Selected Projects</h2>
+        <span>BUILD</span>
+      </div>
+
+      <div class="section-grid">
+        <div class="card">
+          <div class="card-header-line">
+            <div class="card-title">Facial Recognition with CNN</div>
+            <div class="card-meta">Jan 2025 – Jun 2025</div>
+          </div>
+          <p class="card-subtitle">
+            Multi-label CNN for demographic classification from facial images.
+          </p>
+          <ul>
+            <li>Designed a multi-layer CNN to classify age, ethnicity, and gender from face images across diverse demographics.</li>
+            <li>Pre-processed data with normalization and augmentation (rotation, flipping, scaling) to improve robustness.</li>
+            <li>Achieved ~90% test accuracy, outperforming logistic regression and SVM baselines by 25–30%.</li>
+          </ul>
+          <div class="card-tags">
+            <span class="tag">CNN</span>
+            <span class="tag">PyTorch / TensorFlow</span>
+            <span class="tag">Computer Vision</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header-line">
+            <div class="card-title">Police Misconduct Detection (BU Spark!)</div>
+            <div class="card-meta">Aug 2024 – Jan 2025</div>
+          </div>
+          <p class="card-subtitle">
+            NLP pipeline to classify police misconduct from court cases.
+          </p>
+          <ul>
+            <li>Scraped and processed court case data from 50 U.S. states using web crawlers and OCR.</li>
+            <li>Cleaned and structured unstructured legal text using NLP (TF-IDF, embeddings) for downstream modeling.</li>
+            <li>Built and tuned classification models that improved misconduct detection accuracy by ~50% vs baseline.</li>
+            <li>Developed an interactive dashboard to visualize case outcomes and query misconduct records.</li>
+          </ul>
+          <div class="card-tags">
+            <span class="tag">Python</span>
+            <span class="tag">NLP</span>
+            <span class="tag">Text Classification</span>
+            <span class="tag">Dashboards</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header-line">
+            <div class="card-title">COVID-19 Policy Analysis</div>
+            <div class="card-meta">Jan 2024 – May 2024</div>
+          </div>
+          <p class="card-subtitle">
+            Cloud data pipeline and dashboard for global policy effectiveness.
+          </p>
+          <ul>
+            <li>Built a modern data pipeline in Microsoft Azure and SQL to integrate COVID-19 data from three heterogeneous sources.</li>
+            <li>Analyzed 6,000+ global policy responses to evaluate their effectiveness on infection rates and mitigation.</li>
+            <li>Designed interactive Power BI dashboards to simulate policy scenarios and present a mitigation plan.</li>
+          </ul>
+          <div class="card-tags">
+            <span class="tag">Azure</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">Data Engineering</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header-line">
+            <div class="card-title">LAPD Crime &amp; Economic Data Analysis</div>
+            <div class="card-meta">Sep 2024 – Jan 2025</div>
+          </div>
+          <p class="card-subtitle">
+            Spatial analysis of crime patterns and neighborhood economics.
+          </p>
+          <ul>
+            <li>Analyzed 10 years of LAPD crime reports and linked them with census economic data to study crime-economy relationships.</li>
+            <li>Processed GIS datasets and built an R Shiny app with interactive maps to visualize spatial patterns.</li>
+          </ul>
+          <div class="card-tags">
+            <span class="tag">R</span>
+            <span class="tag">R Shiny</span>
+            <span class="tag">GIS</span>
+            <span class="tag">Data Visualization</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header-line">
+            <div class="card-title">Sixth Degree of Separation</div>
+            <div class="card-meta">Sep 2023 – Dec 2023</div>
+          </div>
+          <p class="card-subtitle">
+            Rust network analysis tool for Gnutella peer-to-peer network.
+          </p>
+          <ul>
+            <li>Built a network analysis tool in Rust using BFS to study a 6,301-node, 20,777-edge Gnutella network.</li>
+            <li>Modeled connectivity and “six steps” behavior and created interactive connection maps to evaluate social networking costs.</li>
+          </ul>
+          <div class="card-tags">
+            <span class="tag">Rust</span>
+            <span class="tag">Graphs</span>
+            <span class="tag">BFS</span>
+            <span class="tag">Network Analysis</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="section-header">
+        <h2>Skills</h2>
+        <span>STACK</span>
+      </div>
+
+      <div class="skills-grid card">
+        <div>
+          <div class="card-title">Programming</div>
+          <ul class="skills-list">
+            <li>Python, Java, Rust, R</li>
+            <li>SQL (Coursera SQL for Data Science)</li>
+          </ul>
+        </div>
+        <div>
+          <div class="card-title">Machine Learning &amp; AI</div>
+          <ul class="skills-list">
+            <li>CNN, RNN, LSTM, KNN, K-Means</li>
+            <li>Random Forest, Decision Trees, SVM</li>
+            <li>Gradient Boosting (XGBoost / LightGBM)</li>
+            <li>NLP (text classification, embeddings)</li>
+            <li>PyTorch, TensorFlow</li>
+          </ul>
+        </div>
+        <div>
+          <div class="card-title">Data Engineering &amp; Cloud</div>
+          <ul class="skills-list">
+            <li>AWS: S3, EMR Serverless, Athena, Lambda, SageMaker</li>
+            <li>Kafka, Spark, Hadoop, Snowflake, Databricks</li>
+            <li>Airflow, AutoSys, Datadog</li>
+            <li>Azure, Power BI</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="section-header">
+        <h2>Contact</h2>
+        <span>REACH OUT</span>
+      </div>
+
+      <div class="card contact-card">
+        <div class="contact-info">
+          <p>
+            I’m open to data engineering, data science, and analytics roles, as well as research or collaboration opportunities.
+          </p>
+          <p>
+            The fastest way to reach me is by email, but you can also find me on GitHub and LinkedIn.
+          </p>
+        </div>
+        <div class="contact-links">
+          <a class="btn-primary" href="mailto:z2004@bu.edu">Email: z2004@bu.edu</a>
+          <a class="btn-ghost" href="https://github.com/zihaoguo3" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn-ghost" href="https://www.linkedin.com/in/zihao-guo-771a20264/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; <span id="year"></span> Zihao Guo · Built with GitHub Pages
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
