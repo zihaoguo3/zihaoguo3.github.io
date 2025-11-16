@@ -11,6 +11,8 @@
       background: #ffffff;
       color: #111827;
       -webkit-font-smoothing: antialiased;
+      font-size: 17px; /* Larger base font */
+      line-height: 1.6;
     }
 
     a {
@@ -41,21 +43,10 @@
       gap: 8px;
     }
 
-    .logo-circle {
-      width: 26px;
-      height: 26px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #2563eb, #3b82f6);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 13px;
-      font-weight: 700;
-      color: #f9fafb;
-    }
+    /* Removed logo-circle; only name in nav now */
 
     .nav-name {
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 600;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -67,7 +58,7 @@
       list-style: none;
       padding: 0;
       margin: 0;
-      font-size: 14px;
+      font-size: 16px; /* Larger nav text */
     }
 
     nav a {
@@ -132,18 +123,18 @@
     }
 
     .hero-title-block h1 {
-      font-size: clamp(28px, 3.4vw, 36px);
+      font-size: clamp(32px, 4vw, 42px); /* Larger hero name */
       margin: 0 0 4px;
       letter-spacing: -0.03em;
     }
 
     .hero-title-small {
-      font-size: 13px;
+      font-size: 15px;
       color: #6b7280;
     }
 
     .hero-subtitle {
-      font-size: 16px;
+      font-size: 18px; /* Larger subtitle */
       color: #4b5563;
       margin-bottom: 18px;
       max-width: 32rem;
@@ -159,8 +150,8 @@
     .btn-primary,
     .btn-ghost {
       border-radius: 999px;
-      padding: 9px 16px;
-      font-size: 14px;
+      padding: 11px 18px; /* Slightly bigger buttons */
+      font-size: 15px;
       border: 1px solid transparent;
       display: inline-flex;
       align-items: center;
@@ -213,7 +204,7 @@
     }
 
     .section-header h2 {
-      font-size: 20px;
+      font-size: 24px; /* Larger section titles */
       margin: 0;
     }
 
@@ -245,17 +236,17 @@
     }
 
     .card-title {
-      font-size: 15px;
+      font-size: 18px; /* Larger card title */
       font-weight: 600;
     }
 
     .card-meta {
-      font-size: 12px;
+      font-size: 13px;
       color: #6b7280;
     }
 
     .card-subtitle {
-      font-size: 13px;
+      font-size: 15px; /* Larger body text */
       color: #6b7280;
       margin-bottom: 6px;
     }
@@ -265,7 +256,7 @@
       flex-wrap: wrap;
       gap: 6px;
       margin-top: 6px;
-      font-size: 11px;
+      font-size: 12px;
     }
 
     .tag {
@@ -279,7 +270,7 @@
     .card ul {
       margin: 0;
       padding-left: 18px;
-      font-size: 13px;
+      font-size: 15px; /* Larger list text */
       color: #4b5563;
     }
 
@@ -294,7 +285,7 @@
     }
 
     .skills-list {
-      font-size: 13px;
+      font-size: 15px;
       color: #4b5563;
       margin: 6px 0 0;
       padding: 0;
@@ -314,7 +305,7 @@
     }
 
     .contact-info {
-      font-size: 14px;
+      font-size: 15px;
       color: #4b5563;
     }
 
@@ -328,7 +319,7 @@
       max-width: 940px;
       margin: 24px auto 0;
       padding: 0 18px 26px;
-      font-size: 11px;
+      font-size: 12px;
       color: #9ca3af;
       text-align: right;
     }
@@ -363,7 +354,6 @@
   <header>
     <div class="nav-inner">
       <div class="nav-left">
-        <div class="logo-circle">ZG</div>
         <div class="nav-name">Zihao Guo</div>
       </div>
       <nav>
@@ -383,7 +373,7 @@
     <section class="hero" id="top">
       <div class="hero-top">
         <div class="hero-avatar">
-          <!-- Put your headshot in the repo as profile.jpg (optional) -->
+          <!-- Put your headshot in the repo as GuoZihao.jpg (optional) -->
           <img src="GuoZihao.jpg" alt="Portrait of Zihao Guo" />
         </div>
         <div class="hero-title-block">
@@ -403,7 +393,6 @@
         <a class="btn-ghost" href="https://github.com/zihaoguo3" target="_blank" rel="noopener">GitHub</a>
         <a class="btn-ghost" href="https://www.linkedin.com/in/zihao-guo-771a20264/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
-
     </section>
 
     <!-- ABOUT -->
@@ -569,6 +558,50 @@
             <span class="tag">Power BI</span>
           </div>
         </div>
+
+        <!-- NEW PROJECT: Sixth Degree of Separation -->
+        <div class="card">
+          <div class="card-header-line">
+            <div class="card-title">Sixth Degree of Separation (Network Analysis in Rust)</div>
+            <div class="card-meta">Sep 2023 – Dec 2023</div>
+          </div>
+          <p class="card-subtitle">
+            Network analysis using BFS on a large peer-to-peer dataset.
+          </p>
+          <ul>
+            <li>Built a Rust-based network analysis tool using Breadth-First Search (BFS) to study the Gnutella peer-to-peer network (6,301 nodes, 20,777 edges).</li>
+            <li>Analyzed connectivity patterns, confirming “six steps” between individuals and modeling social network dynamics.</li>
+            <li>Created interactive connection maps to evaluate behavioral costs, demonstrating social networking as a cost-effective activity.</li>
+          </ul>
+          <div class="card-tags">
+            <span class="tag">Rust</span>
+            <span class="tag">Graph Theory</span>
+            <span class="tag">BFS</span>
+            <span class="tag">Network Analysis</span>
+          </div>
+        </div>
+
+        <!-- NEW PROJECT: LAPD Crime & Economic Data Analysis -->
+        <div class="card">
+          <div class="card-header-line">
+            <div class="card-title">LAPD Crime &amp; Economic Data Analysis</div>
+            <div class="card-meta">Sep 2024 – Jan 2025</div>
+          </div>
+          <p class="card-subtitle">
+            Spatial and economic analysis of crime patterns with an interactive R Shiny app.
+          </p>
+          <ul>
+            <li>Analyzed 10 years of LAPD crime reports and linked them with census economic data to study neighborhood crime–economy relationships.</li>
+            <li>Processed GIS datasets to explore spatial and socioeconomic patterns across Los Angeles neighborhoods.</li>
+            <li>Developed an interactive R Shiny app with dynamic maps to visualize crime density, income levels, and other key indicators.</li>
+          </ul>
+          <div class="card-tags">
+            <span class="tag">R Shiny</span>
+            <span class="tag">GIS</span>
+            <span class="tag">Data Visualization</span>
+            <span class="tag">Census Data</span>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -606,6 +639,24 @@
       </div>
     </section>
 
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="section-header">
+        <h2>Contact</h2>
+        <span>REACH OUT</span>
+      </div>
+      <div class="card contact-card">
+        <div class="contact-info">
+          Interested in data engineering, analytics, or ML roles for 2026 new grad.  
+          The fastest way to reach me is via email.
+        </div>
+        <div class="contact-links">
+          <a class="btn-primary" href="mailto:z2004@bu.edu">Email Me</a>
+          <a class="btn-ghost" href="https://github.com/zihaoguo3" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn-ghost" href="https://www.linkedin.com/in/zihao-guo-771a20264/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
